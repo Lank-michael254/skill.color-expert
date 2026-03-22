@@ -29,9 +29,21 @@ A comprehensive knowledge base for color-related work. See `references/INDEX.md`
 | Color difference (fast) | **Euclidean in OKLAB** | Good enough for most applications |
 | Video/image compression | **YCbCr** | Luma+chroma separation enables chroma subsampling |
 
-### Why HSL Is Bad
+### Understanding HSL's Limitations
 
-HSL lightness is a lie — fully saturated yellow and fully saturated blue have the same L value but vastly different perceived brightness. HSL hue spacing is non-uniform (20° shift near red = huge change; 20° near green = barely visible). HSL "saturation" doesn't correlate with perceived saturation. Use OKLCH instead.
+HSL isn't "bad" — it's a simple, fast geometric rearrangement of RGB into a cylinder. It's fine for quick color picking and basic UI work. But its three channels don't correspond to human perception:
+
+- **Lightness (L):** fully saturated yellow (`hsl(60,100%,50%)`) and fully saturated blue (`hsl(240,100%,50%)`) have the same L=50% but vastly different perceived brightness. L is a mathematical average, not a perceptual measurement.
+- **Hue (H):** non-uniform spacing. A 20° shift near red produces a dramatic change; the same 20° near green is barely visible. The green region is compressed, reds are stretched.
+- **Saturation (S):** doesn't correlate with perceived saturation. A color can have S=100% and still look muted (e.g., dark saturated blue).
+
+**When HSL is fine:** simple color pickers, quick CSS tweaks, situations where perceptual accuracy doesn't matter.
+
+**When to use something better:**
+- Generating palettes or scales → **OKLCH** (uniform lightness across hues)
+- Creating gradients → **OKLAB** or `color-mix(in oklab)` (no mid-gradient darkening)
+- Gamut-aware picking with HSL-like UX → **OKHSL** (Ottosson's perceptual HSL)
+- Normalized saturation 0–100% → **HSLuv** (CIELUV-based, no out-of-bounds)
 
 ### Key Distinctions
 
