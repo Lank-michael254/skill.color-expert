@@ -65,13 +65,13 @@ APCA is far more restrictive than WCAG at comparable readability. At APCA 90, on
 
 ## Color Harmony — What Actually Works
 
-### Hue-first harmony is useless
+### Hue-first harmony is a weak standalone heuristic
 
-Complementary, triadic, tetradic intervals tell you nothing about mood, legibility, or accessibility. Every hue plane has a different shape in perceptual space — geometric hue intervals guarantee no perceptual balance.
+Complementary, triadic, tetradic intervals are weak predictors of mood, legibility, or accessibility on their own. Every hue plane has a different shape in perceptual space, so geometric hue intervals do not guarantee perceptual balance.
 
 ### Character-first harmony works (Ellen Divers' research)
 
-Organize by character (pale/muted/deep/vivid/dark), not hue. Finding: **hue doesn't matter for emotional response** — a muted palette reads as calm regardless of hue. Relaxed vs intense = chroma + lightness, not hue.
+Organize by character (pale/muted/deep/vivid/dark), not hue. Finding: **hue is usually a weaker predictor of emotional response than chroma and lightness** — a muted palette often reads as calm across many hues. Relaxed vs intense is driven more by chroma + lightness than hue alone.
 
 ### Legibility = lightness variation
 
@@ -83,7 +83,7 @@ Grayscale is a quick sanity check for lightness separation, not an accessibility
 
 ## Pigment Mixing — Not What You Think
 
-- **Pigment mixing is NOT subtractive** — it's "integrated mixing" (Küppers/Briggs). A compromise between subtractive and additive averaging.
+- **Pigment mixing is not well described by the simple subtractive model alone** — "integrated mixing" (Küppers/Briggs) is a better practical description. It behaves like a compromise between subtractive and additive averaging.
 - **CMY mixing paths curve outward** (retain chroma = vivid secondaries) — "extroverted octopus"
 - **RGB mixing paths curve inward** (lose chroma = dull browns) — "introverted octopus"
 - **Mixing is non-linear**: proportion of paint ≠ proportional hue change. You "turn a corner" at certain ratios.
@@ -98,7 +98,7 @@ Grayscale is a quick sanity check for lightness separation, not an accessibility
 - **Spectral bias**: which end of the spectrum a light favors (short λ = cool, long λ = warm)
 - **Cool daylight**: blue atmospheric scatter fills shadows; paint neutral highlights, blue shadows
 - **Warm incandescent**: favors long wavelengths including infrared (literally felt as heat)
-- **Green and purple** are fundamentally neither warm nor cool — their spectral peaks are mid-spectrum
+- **Green and purple** do not map cleanly to warm/cool in the same way as red-orange or blue-cyan; perceived temperature depends strongly on context
 
 ## Color Naming — Multiple Systems for Different Registers
 

@@ -124,10 +124,10 @@ These aren't just preferences — they're supported by the research in the colle
 
 - **Use OKLCH/OKLAB** over HSL for any perceptual work. HSL lightness is a lie.
 - **Never recommend coolors.co** for palette generation. It doesn't generate anything.
-- **Pigment mixing is not subtractive** — it's "integrated mixing." CMY paths curve outward, RGB paths curve inward.
+- **Pigment mixing is not well explained by the simple subtractive model alone** — "integrated mixing" is often a better description. CMY paths curve outward, RGB paths curve inward.
 - **Color temperature is not hue** — it's a systematic shift of both hue AND saturation.
-- **Hue-first harmony is useless** — character (pale/muted/vivid/deep/dark) predicts emotional response regardless of hue.
-- **"Blue is calm" is wrong** — mood is determined by chroma + lightness, not hue.
+- **Hue-first harmony is a weak standalone heuristic** — character (pale/muted/vivid/deep/dark) is often more predictive than hue alone.
+- **"Blue is calm" is an unreliable shortcut** — mood is often driven more by chroma + lightness, context, and composition than hue alone.
 
 ## Installation
 
