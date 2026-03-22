@@ -2,7 +2,7 @@
 
 **Source:** _Interaction of Color: text of the original edition with revised plate section_
 **Author:** Josef Albers
-**Archive.org:** https://archive.org/details/interactionofcol0000albe
+**Archive.org:** [archive.org/details/interactionofcol0000albe](https://archive.org/details/interactionofcol0000albe)
 
 ## What It Is
 

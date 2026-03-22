@@ -2,8 +2,8 @@
 
 **Specs:**
 
-- CSS Color 4 — https://www.w3.org/TR/css-color-4/
-- CSS Color 5 — https://www.w3.org/TR/css-color-5/
+- CSS Color 4 — [w3.org/TR/css-color-4](https://www.w3.org/TR/css-color-4/)
+- CSS Color 5 — [w3.org/TR/css-color-5](https://www.w3.org/TR/css-color-5/)
 
 ## What It Is
 

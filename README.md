@@ -14,6 +14,8 @@ The skill has three layers:
 
 3. **`references/`** (120 markdown files, ~286K words) — Deep reference material: full video transcripts, article summaries, library documentation, scraped websites, and research notes.
 
+There is also a lightweight **`evals/`** folder for realistic trigger and task prompts so the skill can be reviewed against actual usage instead of only edited by intuition.
+
 ## How it was built
 
 The collection process is simple: when I come across a color resource worth keeping — a YouTube video, a GitHub repo, a research paper, an article — I paste the URL and the skill's workflow captures it:
@@ -54,7 +56,19 @@ references/
                                       # Tyler Hobbs generative color, Fontana approach,
                                       # pixel art palettes, Book of Shaders, LYGIA,
                                       # paint mixing lecture, color harmony lecture...
+evals/
+  trigger-evals.json                  # Realistic should-trigger / should-not-trigger prompts
+  task-prompts.md                     # Realistic color tasks for qualitative review
+MAINTENANCE.md                        # What belongs where, source quality bar, review rubric
 ```
+
+## Reviewing the skill
+
+The repo now includes a minimal review loop rather than a heavy benchmarking framework:
+
+1. Use `evals/trigger-evals.json` to sanity-check whether the frontmatter description is likely to trigger in the right situations.
+2. Use `evals/task-prompts.md` to test whether the skill answers realistic color questions at the right level.
+3. Use `MAINTENANCE.md` when deciding whether something belongs in `SKILL.md`, `references/`, or not in the repo at all.
 
 ## What's in it
 

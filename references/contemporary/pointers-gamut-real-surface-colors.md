@@ -1,7 +1,7 @@
 # Pointer's Gamut — Real Surface Colors
 
 **Primary Context:** Michael R. Pointer's real-surface gamut work (1980)
-**Overview:** https://en.wikipedia.org/wiki/Gamut#Pointer's_gamut
+**Overview:** [en.wikipedia.org/wiki/Gamut#Pointer's_gamut](https://en.wikipedia.org/wiki/Gamut#Pointer's_gamut)
 **Related Paper:** Luo, Pointer, Green — _A Spectral Based Colour Gamut for Real Objects_ (ICC/CIE workshop PDF)
 
 ## What It Is

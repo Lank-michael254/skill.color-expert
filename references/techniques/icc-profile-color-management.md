@@ -1,8 +1,8 @@
 # ICC Profiles — PCS, Rendering Intents, and Color Management
 
 **Source:** International Color Consortium — Introduction to the ICC profile format
-**Overview:** https://www.color.org/iccprofile.xalter
-**Spec:** http://www.color.org/specification/ICC.1-2022-05.pdf
+**Overview:** [color.org/iccprofile.xalter](https://www.color.org/iccprofile.xalter)
+**Spec:** [color.org/specification/ICC.1-2022-05.pdf](http://www.color.org/specification/ICC.1-2022-05.pdf)
 
 ## What It Is
 

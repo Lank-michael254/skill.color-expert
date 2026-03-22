@@ -3,8 +3,8 @@
 **Source:** _The CIECAM02 Color Appearance Model_
 **Authors:** Nathan Moroney, Mark D. Fairchild, R. W. G. Hunt, Changjun Li, M. Ronnier Luo, Todd Newman
 **Conference:** IS&T/SID Tenth Color Imaging Conference (2002)
-**Repository Record:** https://repository.rit.edu/other/143/
-**PDF Mirror:** https://repository.rit.edu/cgi/viewcontent.cgi?article=1146&context=other
+**Repository Record:** [repository.rit.edu/other/143](https://repository.rit.edu/other/143/)
+**PDF Mirror:** [repository.rit.edu/cgi/viewcontent...](https://repository.rit.edu/cgi/viewcontent.cgi?article=1146&context=other)
 
 ## What It Is
 

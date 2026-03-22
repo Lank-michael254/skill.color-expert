@@ -106,5 +106,5 @@ graph.hasCycles(); // detect circular deps
 
 ## Links
 
-- **GitHub:** https://github.com/meodai/color-router
+- **GitHub:** [github.com/meodai/color-router](https://github.com/meodai/color-router)
 - **npm:** `npm install color-router`

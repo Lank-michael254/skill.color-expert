@@ -1,8 +1,8 @@
 # CIE 1931 — Standard Observer, XYZ, and Color Matching Functions
 
 **Primary Standard Data:** CIE 1931 colour-matching functions, 2 degree observer
-**DOI:** https://doi.org/10.25039/CIE.DS.xvudnb9b
-**Background Overview:** https://en.wikipedia.org/wiki/CIE_1931_color_space
+**DOI:** [doi.org/10.25039/CIE.DS.xvudnb9b](https://doi.org/10.25039/CIE.DS.xvudnb9b)
+**Background Overview:** [en.wikipedia.org/wiki/CIE_1931_color_space](https://en.wikipedia.org/wiki/CIE_1931_color_space)
 
 ## What It Is
 

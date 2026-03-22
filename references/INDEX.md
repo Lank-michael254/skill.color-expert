@@ -170,6 +170,8 @@ Curated transcripts, notes, and source material. Organized for the color-expert 
 
 ## Online Tools
 
+<!-- markdownlint-disable MD034 -->
+
 | Tool                      | URL                                                     | Description                                                                                                                                                                                              |
 | ------------------------- | ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Digital Color Fidget      | https://petertdonahue.com/color-fidget.html             | Multi-ring color harmony picker                                                                                                                                                                          |
@@ -223,6 +225,8 @@ Curated transcripts, notes, and source material. Organized for the color-expert 
 | color.pizza API           | https://api.color.pizza/v1/                             | Color naming API: `?values=8a2be2&list=bestOf` → name, hex, RGB, HSL, Lab, luminance, WCAG contrast. 42 lists (31K+ default, bestOf, ridgway, xkcd, multi-language...). `/v1/lists/` for available lists |
 | Color Naming in Languages | https://idl.uw.edu/color-naming-in-different-languages/ | UW research: how languages divide the spectrum differently. "No 'blue' in Korean." 8 interactive visualizations, dataset on GitHub                                                                       |
 | handprint.com             | https://www.handprint.com                               | Bruce MacEvoy pigment data                                                                                                                                                                               |
+
+<!-- markdownlint-enable MD034 -->
 
 ## Reference Sites (scraped)
 

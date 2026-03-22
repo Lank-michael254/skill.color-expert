@@ -2,7 +2,7 @@
 
 **Source:** _Measuring Colour_
 **Authors:** R. W. G. Hunt, M. R. Pointer
-**Archive.org:** https://archive.org/details/measuringcoloure00rwgh_0
+**Archive.org:** [archive.org/details/measuringcoloure00rwgh_0](https://archive.org/details/measuringcoloure00rwgh_0)
 
 ## What It Is
 
