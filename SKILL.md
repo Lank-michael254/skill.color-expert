@@ -42,15 +42,15 @@ HSL isn't "bad" — it's a simple, fast geometric rearrangement of RGB into a cy
 
 ### Key Distinctions
 
-- **Chroma** = colorfulness vs gray at same lightness (distance from neutral axis)
-- **Saturation** = colorfulness relative to brightness (angle from white toward black)
-- **Lightness** = perceived brightness relative to illumination (contextual)
-- **Brightness** = absolute luminous intensity (context-independent)
+- **Chroma** = colorfulness relative to a same-lightness neutral reference
+- **Saturation** = perceived colorfulness relative to the color's own brightness
+- **Lightness** = perceived reflectance relative to a similarly lit white
+- **Brightness** = perceived intensity of light coming from a stimulus
 - Same chroma ≠ same saturation. These are different dimensions.
 
 ## Accessibility — Key Numbers
 
-Of ~281 trillion hex color pairs (research by @mrmrs_, computed in Rust):
+Of ~281 trillion hex color pairs (research by @mrmrs\_, computed in Rust):
 
 | Threshold                 | % passing | Odds            |
 | ------------------------- | --------- | --------------- |
@@ -75,7 +75,7 @@ Organize by character (pale/muted/deep/vivid/dark), not hue. Finding: **hue does
 
 ### Legibility = lightness variation
 
-If it reads in grayscale, it's accessible. Same character + varied lightness = readable. Same lightness regardless of hue = illegible.
+Grayscale is a quick sanity check for lightness separation, not an accessibility proof. You still need to verify contrast with WCAG/APCA and consider text size, weight, polarity, and CVD. Same character + varied lightness is often more readable. Same lightness regardless of hue is usually illegible.
 
 ### The 60-30-10 rule
 

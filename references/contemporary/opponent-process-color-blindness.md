@@ -9,6 +9,7 @@
 ## The Opponent Process Model
 
 All perceivable hues = blends of four psychological primaries on two axes:
+
 - **A axis:** rosy red ↔ aqua green
 - **B axis:** yellow ↔ blue
 
@@ -17,11 +18,13 @@ These are the "opponent axes" — the foundation of CIELAB (a*, b*) and OKLAB.
 ## How It Explains Color Blindness
 
 ### Red-Green Color Blindness (most common)
+
 - Missing one cone type → can't construct the red-green contrast axis
 - **A axis disappears** — only the B axis (yellow↔blue) remains
 - All perceivable colors = yellow, blue, or desaturated versions of those
 
 ### Yellow-Blue Color Blindness (rare)
+
 - Can't construct the yellow-blue contrast axis
 - **B axis disappears** — only the A axis (pink↔green) remains
 - All perceivable colors = pink, green, or desaturated versions of those
@@ -35,6 +38,7 @@ Orange = on the B axis (yellowish) AND the A axis (reddish). Blue = opposite on 
 ## Key Insight for the Skill
 
 When recommending accessible color schemes:
+
 - **Orange ↔ blue** is the single most robust pair across all CVD types
 - Pairs that rely on red↔green contrast fail for ~8% of males
 - Pairs that rely only on yellow↔blue contrast fail for the rarer tritanopia

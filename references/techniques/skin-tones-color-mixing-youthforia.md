@@ -14,21 +14,27 @@ Youthforia's shade 600 (iron oxide black) was marketed as a "mixer" for creating
 ## The Color Science
 
 ### The Skin Tone Curve
+
 Using the Monk Skin Tone Scale (10 tones, developed by Dr. Ellis Monk for Google), plotted in 3D color space (lightness vertical, chroma = distance from center):
 
 **Skin tones follow a curve that bends OUTWARD from gray at mid-tones.** As skin gets darker, it gets MORE chromatic (more pigmented), not less. The curve goes:
+
 - Light skin = moderate chroma
 - Mid skin = HIGHEST chroma (most chromatic)
 - Dark skin = still high chroma, slightly less but NOT gray
 
 ### Adding Black = Wrong Direction
+
 Iron oxide black mixed into a skin tone:
+
 - Gets darker ✓
 - Gets GRAYER (curves inward toward the neutral axis) ✗
 - Opposite of what real skin does
 
 ### Adding Burnt Sienna = Right Direction
+
 Burnt sienna (dark AND pigmented):
+
 - Gets darker ✓
 - Maintains or increases chroma ✓
 - Follows the natural skin tone curve ✓
@@ -43,6 +49,7 @@ The chroma curve of human skin tones bends OUTWARD, not inward. To darken while 
 ## Why This Matters Beyond Cosmetics
 
 This is the same principle as:
+
 - **Paint mixing non-linearity** — adding black to yellow doesn't make dark yellow, it makes olive/green (shifts hue + kills chroma)
 - **Color Nerd's UFV lecture** — "white doesn't just lighten, it shifts hue and kills chroma"; same applies to black in reverse
 - **The mixing path geometry** — paths through color space are curved, not straight lines through the neutral axis
