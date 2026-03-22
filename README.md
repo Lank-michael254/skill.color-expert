@@ -12,7 +12,7 @@ The skill has three layers:
 
 2. **`references/INDEX.md`** (~220 lines) — A structured lookup table your agent can scan to find the right reference file for a specific topic.
 
-3. **`references/`** (113 markdown files, ~286K words) — Deep reference material: full video transcripts, article summaries, library documentation, scraped websites, and research notes.
+3. **`references/`** (120 markdown files, ~286K words) — Deep reference material: full video transcripts, article summaries, library documentation, scraped websites, and research notes.
 
 ## How it was built
 
@@ -30,7 +30,7 @@ Everything goes into one of three folders and gets indexed.
 
 ## Structure
 
-```
+```text
 SKILL.md                              # The skill definition (loaded on activation)
 CLAUDE.md                             # Claude Code repo instructions
 references/
@@ -62,7 +62,7 @@ references/
 
 |                                 |    Count |
 | ------------------------------- | -------: |
-| Markdown reference files        |      113 |
+| Markdown reference files        |      120 |
 | Total words                     | ~286,000 |
 | Source PDFs (local, gitignored) |       14 |
 | Online tools catalogued         |       48 |
@@ -82,7 +82,7 @@ The resources I keep returning to when explaining where color theory came from a
 - **Elizabeth Lewis** (1931) — married trichromatic + opponent process, anticipating CIE Lab by 30 years
 - Plus: Caravaggio's copper resinate technique, Itten's seven contrasts (critically reviewed), the evolution of "magenta" as a color name, Frank Reilly's controlled palette
 
-### Contemporary color science (31 files)
+### Contemporary color science (55 files)
 
 The theory and science I reference when building tools or explaining why things work the way they do:
 
@@ -93,7 +93,7 @@ The theory and science I reference when building tools or explaining why things 
 - **Colour Society of Australia** — 13 webinar transcripts (Briggs, Itten critique, Golden paint making, Reilly palette, colour philosophy)
 - **Accessible color pair research** — original computation: of 281T hex pairs, only 11.98% pass WCAG AA, 0.08% pass APCA 90
 
-### Techniques, tools & libraries (45 files)
+### Techniques, tools & libraries (50 files)
 
 The practical resources — the tools I've built, use, or recommend:
 
@@ -116,7 +116,7 @@ color-name-lists (18 systems), color-description (emotional adjectives), Ridgway
 Tyler Hobbs (probability-weighted palettes), Harvey Rayner / Fontana (fully generative color), Piter Pasma (tweaked rainbow formula), mattdesl workshop, Book of Shaders, LYGIA shader library
 
 **Practical design:**
-Pixel art palette construction, Goethe edge colors as a design hack, Cubehelix, color harmony lecture ("hue-first is useless, character-first works"), Aladdin color analysis, screen-to-print workflow
+Pixel art palette construction, Goethe edge colors as a design hack, Cubehelix, color harmony lecture ("hue-first is a weak standalone heuristic; character-first often works better"), Aladdin color analysis, screen-to-print workflow
 
 ## Key opinions baked into the skill
 
