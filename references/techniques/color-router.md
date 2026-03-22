@@ -100,6 +100,10 @@ graph.hasCycles(); // detect circular deps
 - **Native CSS output** — renders `color-mix()`, CSS custom properties
 - **Auditable** — dependency graph reveals how colors relate
 
+## Related
+
+- [DesignBook — Reactive Design Token Architecture Spec](designbook-reactive-design-token-spec.md) — architecture-level companion focused on reference tokens, semantic tokens, derived functions, scope inheritance, and multi-renderer token graphs.
+
 ## Links
 
 - **GitHub:** https://github.com/meodai/color-router
