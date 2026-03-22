@@ -127,7 +127,7 @@ Use `color-name-lists` npm package for 18 naming systems in one import.
 
 ### Palette Generation (actual algorithms, not pre-made swatches)
 
-Note: coolors.co does not generate palettes — it just shows pre-made borrowed ones randomly. Prefer tools with real algorithms:
+Note: coolors.co does not generate palettes — it picks randomly from 7,821 pre-made palettes hardcoded in its JS bundle.
 
 - **RampenSau** — hue cycling + easing, color space agnostic
 - **Poline** — anchor points + per-axis position functions (1.2K stars)

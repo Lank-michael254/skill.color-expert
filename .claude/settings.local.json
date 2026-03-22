@@ -54,7 +54,12 @@
       "WebFetch(domain:color-input.netlify.app)",
       "WebFetch(domain:thebookofshaders.com)",
       "WebFetch(domain:lygia.xyz)",
-      "WebFetch(domain:colorjs.io)"
+      "WebFetch(domain:colorjs.io)",
+      "Bash(/tmp/markitdown-venv/bin/python3 << 'PYEOF'\nwith open\\('/tmp/coolors.js'\\) as f:\n    js = f.read\\(\\)\n\n# Find the big array declaration\nidx = js.find\\('on=[[\"ff9fb2\"'\\)\nif idx == -1:\n    idx = js.find\\('[[\"ff9fb2\"'\\)\n    \nif idx != -1:\n    # Get variable name and count brackets to find the full array\n    start = max\\(0, idx - 50\\)\n    print\\(\"Context:\", js[start:idx+100]\\)\n    print\\(\\)\n    \n    # Count how many sub-arrays\n    chunk = js[idx:]\n    end = chunk.find\\(']];'\\) + 2\n    arr_str = chunk[:end+1]\n    count = arr_str.count\\('\",\"'\\)  # rough count of colors\n    palettes = arr_str.count\\('],['\\) + 1\n    print\\(f\"Array length: {len\\(arr_str\\)} chars\"\\)\n    print\\(f\"~{palettes} palettes \\(each 5 colors\\)\"\\)\n    print\\(f\"That's it — {palettes} pre-made palettes, randomly shown. No algorithm.\"\\)\nPYEOF)",
+      "Bash(/tmp/markitdown-venv/bin/yt-dlp --skip-download --print \"%\\(title\\)s|%\\(channel\\)s|%\\(upload_date\\)s|%\\(duration\\)s|%\\(view_count\\)s\" \"https://www.youtube.com/watch?v=u_tQ4UkIPfU\" 2>/dev/null)",
+      "Bash(/tmp/markitdown-venv/bin/yt-dlp --skip-download --write-auto-sub --sub-lang \"en.*\" --sub-format vtt --convert-subs srt -o \"/tmp/yt_%\\(id\\)s\" --print \"%\\(title\\)s|%\\(channel\\)s|%\\(upload_date\\)s|%\\(duration\\)s|%\\(view_count\\)s\" \"https://www.youtube.com/watch?v=Flkao2Xa7OI\" 2>/dev/null)",
+      "Bash(/tmp/markitdown-venv/bin/yt-dlp --skip-download --write-auto-sub --sub-lang \"en\" --sub-format srt -o \"/tmp/yt_%\\(id\\)s\" \"https://www.youtube.com/watch?v=Flkao2Xa7OI\")",
+      "Bash(wc -l /tmp/yt_Flkao2Xa7OI*.srt)"
     ]
   }
 }
