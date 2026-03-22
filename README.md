@@ -128,11 +128,49 @@ These aren't just preferences — they're supported by the research in the colle
 - **Hue-first harmony is useless** — character (pale/muted/vivid/deep/dark) predicts emotional response regardless of hue.
 - **"Blue is calm" is wrong** — mood is determined by chroma + lightness, not hue.
 
-## Using the skill
+## Installation
 
-Install the skill in Claude Code's superpowers system. When Claude detects color-related work, it loads `SKILL.md` and can dig into the reference files as needed.
+### Clone directly into Claude Code's skills directory
 
-The skill triggers on: color naming, color spaces, palette generation, accessibility/contrast, color theory questions, color conversion, pigment mixing, historical color terminology.
+```bash
+git clone https://github.com/meodai/skill.color-expert ~/.claude/skills/color-expert
+```
+
+### Or clone elsewhere and symlink
+
+```bash
+git clone https://github.com/meodai/skill.color-expert ~/Sites/color-expert
+ln -s ~/Sites/color-expert ~/.claude/skills/color-expert
+```
+
+That's it. Claude Code automatically discovers skills in `~/.claude/skills/`. The next time a color-related task comes up, the skill will trigger.
+
+### Verify it's installed
+
+Start a new Claude Code session and ask something like:
+
+> "What color space should I use for CSS gradients?"
+
+If the skill is loaded, Claude will recommend OKLCH and explain why HSL is perceptually non-uniform — rather than giving a generic answer.
+
+### Updating
+
+```bash
+cd ~/.claude/skills/color-expert && git pull
+```
+
+## What triggers the skill
+
+The skill activates when Claude detects work involving:
+
+- Color naming or defining colors in natural language
+- Color spaces (RGB, HSL, LCH, OKLCH, Lab, etc.)
+- Palette generation or analysis
+- Accessibility and contrast (WCAG, APCA)
+- Color theory questions
+- Color conversion
+- Pigment/paint mixing
+- Historical color terminology
 
 ## License
 
