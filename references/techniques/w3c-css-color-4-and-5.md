@@ -9,6 +9,8 @@
 
 The canonical standards for **modern color in CSS**. If a task touches browser color syntax, interpolation, wide gamut, or CSS-native color computation, these specs are more authoritative than blog posts or library docs.
 
+They describe the **standard**, not guaranteed shipped support in every browser. For compatibility questions, treat the specs as the normative definition and check current implementation status separately.
+
 ## CSS Color 4 — Key Additions
 
 - **`lab()` / `lch()`** and **`oklab()` / `oklch()`** in CSS
@@ -35,4 +37,5 @@ The canonical standards for **modern color in CSS**. If a task touches browser c
 
 - Use for any **web or design-system** question involving color syntax.
 - Use when recommending **CSS-native palette generation** or **relative color transformations**.
-- Use when a user asks whether a certain color workflow is actually supported by browsers.
+- Use when a user asks what a feature **means** or how it is **supposed** to behave in CSS.
+- If a user asks whether a workflow is **currently shipped**, pair this reference with up-to-date browser compatibility data rather than inferring support from the spec alone.

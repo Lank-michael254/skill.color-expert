@@ -3,11 +3,14 @@
 **Source:** _The CIECAM02 Color Appearance Model_
 **Authors:** Nathan Moroney, Mark D. Fairchild, R. W. G. Hunt, Changjun Li, M. Ronnier Luo, Todd Newman
 **Conference:** IS&T/SID Tenth Color Imaging Conference (2002)
-**PDF:** http://www.polybytes.com/misc/Meet_CIECAM02.pdf
+**Repository Record:** https://repository.rit.edu/other/143/
+**PDF Mirror:** https://repository.rit.edu/cgi/viewcontent.cgi?article=1146&context=other
 
 ## What It Is
 
 The primary CIE paper for **CIECAM02**, the appearance model that became a major bridge between raw colorimetry and modern perceptual color workflows.
+
+Use the RIT repository links above as the stable citation target. They are preferable to older unofficial mirrors because they preserve the paper metadata and provenance.
 
 ## Key Points
 
