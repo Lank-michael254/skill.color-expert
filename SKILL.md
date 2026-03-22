@@ -52,20 +52,24 @@ HSL isn't "bad" — it's a simple, fast geometric rearrangement of RGB into a cy
 
 When using colors in a program or CSS, add a semantic layer between raw color values and UI roles.
 
+The examples below are pseudocode, not literal CSS requirements. They express the decision structure an agent should preserve even if the target stack uses different syntax.
+
 - **Use reference tokens for concrete colors**: `--c-red: #f00;`
 - **Use semantic tokens for meaning/role**: `--c-warning: var(--c-red);`
 - **Prefer semantic tokens in components** so themes can swap meaning without rewriting component code.
 - **Encode color decisions when possible** instead of freezing one manual choice into a literal.
 
-Examples:
+Pseudocode examples:
 
-- `--c-red: closest('red', generatedPalette)`
-- `--c-warning: var(--c-red)`
-- `--c-on-surface: mostReadableOn(--c-surface)`
+- `ref.red := closest('red', generatedPalette)`
+- `semantic.warning := ref.red`
+- `semantic.onSurface := mostReadableOn(surface)`
 
 Good pattern: palette/reference tokens define available colors; semantic tokens map those colors to roles like surface, text, accent, success, warning, and danger.
 
 If a system can derive a decision from constraints, encode that derivation. Examples: nearest named hue in a generated palette, foreground chosen by APCA/WCAG target, hover state computed from the base token in OKLCH instead of hand-picking a second unrelated hex.
+
+For larger systems, prefer a **token graph** over a flat token dump: references, semantic roles, derived functions, and scope inheritance. This makes theme changes, accessibility guarantees, and multi-platform export auditable and easier to maintain.
 
 ## Accessibility — Key Numbers
 
