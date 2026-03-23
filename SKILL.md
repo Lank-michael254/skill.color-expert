@@ -163,7 +163,7 @@ Use `color-name-lists` npm package for 18 naming systems in one import.
 Note: coolors.co does not generate palettes — it picks randomly from 7,821 pre-made palettes hardcoded in its JS bundle.
 
 - **RampenSau** — hue cycling + easing, color space agnostic
-- **Poline** — anchor points + per-axis position functions (1.2K stars)
+- **Poline** — anchor points + per-axis position functions (1.2K stars); ships a `<poline-palette>` web component for interactive controls
 - **pro-color-harmonies** — adaptive OKLCH harmony, muddy-zone avoidance, 4 styles × 4 modifiers
 - **dittoTones** — extract Tailwind/Radix "perceptual DNA", apply to your hue
 - **FarbVelo** — random palettes with dark→light structure
