@@ -8,11 +8,11 @@ This started as a simple skill file with some color theory notes. Over time it g
 
 The skill has three layers:
 
-1. **`SKILL.md`** (~150 lines) — The "greatest hits" that your agent loads immediately. Key facts, corrections, tool recommendations, and guidelines that answer most color questions without needing to dig deeper.
+1. **`SKILL.md`** (~200 lines) — The "greatest hits" that your agent loads immediately. Key facts, corrections, tool recommendations, and guidelines that answer most color questions without needing to dig deeper.
 
 2. **`references/INDEX.md`** (~220 lines) — A structured lookup table your agent can scan to find the right reference file for a specific topic.
 
-3. **`references/`** (120 markdown files, ~286K words) — Deep reference material: full video transcripts, article summaries, library documentation, scraped websites, and research notes.
+3. **`references/`** (144 markdown files, ~286K words) — Deep reference material: full video transcripts, article summaries, library documentation, scraped websites, and research notes.
 
 There is also a lightweight **`evals/`** folder for realistic trigger and task prompts so the skill can be reviewed against actual usage instead of only edited by intuition.
 
@@ -78,7 +78,7 @@ The repo now includes a minimal review loop rather than a heavy benchmarking fra
 
 |                                 |    Count |
 | ------------------------------- | -------: |
-| Markdown reference files        |      120 |
+| Markdown reference files        |      144 |
 | Total words                     | ~286,000 |
 | Source PDFs (local, gitignored) |       14 |
 | Online tools catalogued         |       48 |

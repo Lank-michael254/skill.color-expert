@@ -18,7 +18,7 @@ Sources include public domain books (archive.org, Project Gutenberg), academic p
 
 ## No Executable Permissions
 
-This repo contains no `settings.json`, `settings.local.json`, or any configuration that grants shell, network, or filesystem permissions. The `.claude/` directory is gitignored.
+This repo contains no `settings.json`, `settings.local.json`, or any configuration that grants shell, network, or filesystem permissions. The entire `.claude/` directory is gitignored.
 
 ## Reported False Positives
 

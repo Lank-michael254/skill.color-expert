@@ -5,7 +5,7 @@ description: Use when working with color naming, color theory, color spaces, col
 
 # Color Expert
 
-A comprehensive knowledge base for color-related work. See `references/INDEX.md` for 100+ detailed reference files; this skill file contains the essential knowledge to answer most questions directly.
+A comprehensive knowledge base for color-related work. See `references/INDEX.md` for 140+ detailed reference files; this skill file contains the essential knowledge to answer most questions directly.
 
 ## Color Spaces — What to Use When
 
@@ -63,10 +63,10 @@ Across CSS, JS/TS, Swift, design-token JSON, templates, or pseudocode, default t
 
 Raw color literals should usually appear only in palette/reference definitions, conversions, diagnostics, or deliberately one-off examples.
 
-- **Use reference tokens for concrete colors**: `--c-red: #f00;`
-- **Use semantic tokens for meaning/role**: `--c-warning: var(--c-red);`
+- **Use reference tokens for concrete colors**: `ref.red = #f00`
+- **Use semantic tokens for meaning/role**: `semantic.warning = ref.red`
 - **Prefer semantic tokens in components** so themes can swap meaning without rewriting component code.
-- **This default applies in any language**; translate `var(...)` to the target system's equivalent alias/reference mechanism.
+- **This default applies in any language**; translate to the target system's equivalent alias/reference mechanism (CSS custom properties, Swift enums, design-token JSON, etc.).
 - **Encode color decisions when possible** instead of freezing one manual choice into a literal.
 
 Pseudocode examples:
