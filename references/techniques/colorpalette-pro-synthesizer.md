@@ -9,7 +9,7 @@
 
 A synthesizer-style interface for generating programmatic color palettes. Built on **Color.js** (by Lea Verou & Chris Lilley, CSS Color spec editors). Free, no ads, no subscriptions.
 
-**Not to be confused with [pro-color-harmonies](pro-color-harmonies.md)** — a JS library using OKLCH with muddy-zone avoidance. Both offer square/triangle/circle/diamond styles, but Color Palette Pro is a web UI built on Color.js while pro-color-harmonies is a programmatic library.
+**Related:** [pro-color-harmonies](pro-color-harmonies.md) is a standalone JS library by @meodai that reimplements the same harmony logic as a dependency-free lib, built with consent from Color Palette Pro's author. Same 4 styles (square/triangle/circle/diamond), but usable programmatically without the web UI.
 
 ## Palette Types
 
