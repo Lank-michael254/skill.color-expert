@@ -22,7 +22,7 @@ The reference files are a knowledge base, not executable prompts. They contain n
 
 This repo contains no `settings.json`, `settings.local.json`, or any configuration that grants shell, network, or filesystem permissions. The entire `.claude/` directory is gitignored.
 
-A `settings.local.json` existed briefly in early commits (the maintainer's local dev permissions for downloading PDFs and transcribing videos during curation). It was removed in commit `ea1f821` and the `.claude/` directory was gitignored. It is not present on the current branch and has no effect on skill consumers — `settings.local.json` files are per-machine and never loaded from imported skills.
+A `settings.local.json` existed briefly in early commits (the maintainer's local dev permissions for downloading PDFs and transcribing videos during curation). It was removed in commit `ea1f821` and the `.claude/` directory was gitignored. It is not present on the current branch and has no effect on skill consumers — `settings.local.json` files are per-machine and never loaded from imported skills. The file contained only the maintainer's local tool permissions (e.g. `curl` to archive.org, `yt-dlp` for transcripts) used during content curation.
 
 ## Reported False Positives
 
@@ -30,6 +30,6 @@ A `settings.local.json` existed briefly in early commits (the maintainer's local
 
 - **PROMPT_INJECTION risk from reference files** — The 113 markdown files in `references/` are curated summaries of color science literature. They contain no agent instructions, no tool calls, no role-play prompts, and no behavioral overrides. The content is factual (color spaces, pigment chemistry, perception research). Treating educational content as an injection vector would flag any knowledge base, textbook, or documentation site.
 
-- **DATA_EXFILTRATION via absolute paths** — The flagged paths (`/Users/meodai/...`) appeared only in the now-removed `settings.local.json`. This file was the maintainer's local development configuration and is no longer tracked. No absolute paths exist in any shipped skill content.
+- **DATA_EXFILTRATION via absolute paths** — The flagged paths (e.g. `/Users/m.../Sites/...`) appeared only in the now-removed `settings.local.json`. This file was the maintainer's local development configuration and is no longer tracked. No absolute paths exist in any shipped skill content.
 
 - **COMMAND_EXECUTION via settings** — The flagged `settings.local.json` is not part of the distributed skill. It was the maintainer's local dev environment for curating content (downloading PDFs from archive.org, transcribing YouTube videos). It was removed from the repo and `.claude/` is gitignored. Skill consumers never receive this file.
