@@ -1,6 +1,6 @@
 # Image Color Extraction Tools
 
-Two complementary tools for extracting color palettes from images.
+Three tools for extracting color palettes from images — plus one that enables searching by palette.
 
 ---
 
@@ -84,6 +84,38 @@ Upload or paste an image → extracts palette in **OKLab/OKLCh** color space wit
 
 ---
 
+## Art Palette — Palette Extraction + Search-by-Color (Google Arts & Culture)
+
+**URL:** https://github.com/googleartsculture/art-palette
+**Authors:** Simon Doury ([@voglervoice](https://github.com/voglervoice)), Damien Henry ([@dh7](https://github.com/dh7)) — Google Arts & Culture Lab
+**License:** Apache 2.0
+**Status:** Archived (read-only since 2025-11)
+
+### What It Is
+
+A two-part system from Google Arts & Culture that extracts palettes from images *and* enables nearest-neighbor palette search across art collections.
+
+### Architecture
+
+| Part | Language | Purpose |
+| --- | --- | --- |
+| **Frontend** | JavaScript | Palette extractor — processes `ImageData` to compute color palettes from images |
+| **Backend** | Python + TensorFlow | Palette embedding model — maps palettes into Euclidean space preserving perceptual color distance |
+
+### How It Works
+
+1. **Extract** → JS frontend processes image data and produces a color palette
+2. **Embed** → TensorFlow model encodes palette into a vector where perceptually similar palettes are geometrically close
+3. **Search** → Nearest-neighbor lookup finds artworks with matching palettes
+
+### Why It Matters
+
+- **Perceptual embedding** — palette similarity respects human perception, not just RGB distance
+- **Scalable search** — embedding space enables fast nearest-neighbor queries over large art collections
+- **Reference implementation** — foundational concepts for building any "search by color" feature
+
+---
+
 ## When to Use Which
 
 | Scenario                                  | Best tool                     |
@@ -95,8 +127,11 @@ Upload or paste an image → extracts palette in **OKLab/OKLCh** color space wit
 | Bias toward muted/saturated or dark/light | okpalette.color.pizza         |
 | Export palette stats                      | okpalette.color.pizza         |
 | Privacy-first (no uploads)                | okpalette.color.pizza         |
+| Search artworks by palette similarity     | Art Palette                   |
+| Perceptual palette embeddings             | Art Palette                   |
 
 ## Links
 
 - **img-colors.com:** https://img-colors.com/
 - **okpalette.color.pizza:** https://okpalette.color.pizza/
+- **Art Palette:** https://github.com/googleartsculture/art-palette
