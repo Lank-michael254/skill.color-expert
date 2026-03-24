@@ -1,7 +1,7 @@
 # colornerd — 29,875 Paint Manufacturer Color Swatches
 
 **Source:** [GitHub — jpederson/colornerd](https://github.com/jpederson/colornerd)
-**Author:** jpederson (NOT the YouTube Color Nerd channel)
+**Author:** James Pederson 
 **npm:** `colornerd` | **Stars:** 86
 **Picker:** https://jpederson.com/colornerd/
 

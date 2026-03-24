@@ -1,7 +1,7 @@
 # The Fontana Approach to Fully Generative Color
 
 **Source:** https://medium.com/@harvey.rayner/the-fontana-approach-to-fully-generative-color
-**Author:** Harvey Rayner (aka patterndotco)
+**Author:** Harvey Rayner (aka @patterndotco)
 **Date:** 2022-08-21
 
 ## Why This Matters

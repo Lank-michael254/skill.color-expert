@@ -1,7 +1,7 @@
 # colorsort-js — Perceptually Smooth Color Sorting
 
 **Source:** [GitHub — darosh/colorsort-js](https://github.com/darosh/colorsort-js)
-**Author:** darosh (inspired by meodai's CodePen exploration)
+**Author:** Jan Forst (Darosh)
 **License:** MIT
 **Demos:**
 
