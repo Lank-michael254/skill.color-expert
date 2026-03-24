@@ -7,7 +7,7 @@ Three tools for extracting color palettes from images — plus one that enables 
 ## img-colors.com — Clustering-Based Extraction
 
 **URL:** https://img-colors.com/
-**Author:** murmurs
+**Author:** mrmrs / mrmrs.cc
 **Architecture:** Edge-computed (Cloudflare Workers), no server/database
 
 ### How It Works
@@ -18,17 +18,17 @@ Three tools for extracting color palettes from images — plus one that enables 
 4. **Visualize** → 3D point cloud of sampled pixels + centroids
 5. **Generate** → click any palette → instant mesh-blurred gradient background
 
-### 7 Clustering Algorithms
+### Seven Methods (with RGB / Lab variants)
 
-| Algorithm              | Approach                           | Trade-off                                              |
-| ---------------------- | ---------------------------------- | ------------------------------------------------------ |
-| **K-Means**            | Iterative centroid optimization    | Fast; best for spherical clusters                      |
-| **Mini-Batch K-Means** | Random mini-batches                | Even faster on large datasets                          |
-| **DBSCAN**             | Density-based                      | Finds arbitrary shapes; marks outliers as noise        |
-| **Mean-Shift**         | Window slides toward density peaks | No need to pre-set k; slower                           |
-| **Agglomerative**      | Hierarchical dendrogram            | Cut at any depth; O(n²) cost                           |
-| **OPTICS**             | Density thresholds range           | Reveals nested cluster structure                       |
-| **Median-Cut**         | Recursively splits color cube      | Classic palettization; splits on largest channel range |
+| Method                 | What it does                                                                 | Trade-off                                                      |
+| ---------------------- | ---------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| **K-Means**            | Lloyd-style iteration (`ml-kmeans`) to k centroids                           | Fast; favors round, similar-sized clusters in the color space  |
+| **PCA + K-Means**      | One PCA axis orders pixels; quantile-spaced seeds, then K-Means              | Often better seeds than random init; still k-means assumptions   |
+| **DBSCAN**             | Density-connected regions in RGB/Lab                                         | Arbitrary shapes; noise points can be dropped                  |
+| **OPTICS**             | Ordering by reachability; clusters from density (`density-clustering`)       | Handles varying density better than a single DBSCAN ε           |
+| **Agglomerative**      | Hierarchical clustering (average linkage / AGNES), cut to k groups           | Flexible tree cut; heavier on large samples                    |
+| **Median-Cut**         | Recursively splits the box with the largest R/G/B range at the median pixel  | Classic quantization; very fast; builds eight buckets in code, then respects the global palette-size limit |
+| **Random Sampling**    | k **distinct** random pixels from the subsample, equal weight                | Baseline / stress-test; not optimizing a cluster criterion      |
 
 ### 3 Color Spaces for Clustering
 
