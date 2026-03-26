@@ -2,7 +2,7 @@
 
 Curated transcripts, notes, and source material. Organized for the color-expert skill and for building an online color resource.
 
-**144 files** across 3 categories: `historical/` (pre-digital color science), `contemporary/` (modern color science & theory), `techniques/` (tools, libraries, methods, practical application)
+**145 files** across 3 categories: `historical/` (pre-digital color science), `contemporary/` (modern color science & theory), `techniques/` (tools, libraries, methods, practical application)
 
 ## Historical
 
@@ -26,6 +26,7 @@ Curated transcripts, notes, and source material. Organized for the color-expert 
 | [Frank Reilly & the Controlled Palette](historical/reilly-controlled-palette.md)                 | Tristan Elwell on Reilly's systematic palette. 84 min, 10K views.                                                                                                                                                                                       | [CSA](https://www.youtube.com/watch?v=qUOwm_70jEU)                                        |
 | [Bardwell & 18th C. Portrait Colour](historical/bardwell-18th-century-portrait-colour.md)        | Thomas Bardwell's 18th century colour techniques. 63 min.                                                                                                                                                                                               | [CSA](https://www.youtube.com/watch?v=ODxI_QuDkfI)                                        |
 | [Ridgway — Color Standards (1912)](historical/ridgway-color-standards-1912.md)                   | 1,115 named colors across 53 plates. Full text from Gutenberg. Systematic nomenclature for naturalists. 36-hue chromatic scale. [Digitized JSON](https://github.com/meodai/Color-Standards-and-Color-Nomenclature).                                     | [Gutenberg](https://www.gutenberg.org/files/63087/63087-h/63087-h.htm)                    |
+| [Cheskin Color Wheel (1953)](historical/cheskin-1953-color-wheel.md)                             | Cheskin's transparent-overlay wheel solves 2D limitation. Birren's tint/shade/tone (1937). Both knew CMY but handled the RYB→CMY shift differently. Cheskin's spectral error with magenta.                                                               | [Color Nerd](https://www.youtube.com/shorts/HNlFFJowKRk)                                  |
 
 <!-- markdownlint-enable MD060 -->
 
